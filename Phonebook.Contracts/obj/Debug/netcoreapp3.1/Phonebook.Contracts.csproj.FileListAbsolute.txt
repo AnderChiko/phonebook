@@ -1,0 +1,17 @@
+C:\Dev\practise\Phonebook\Phonebook.Contracts\bin\Debug\netcoreapp3.1\Phonebook.Contracts.deps.json
+C:\Dev\practise\Phonebook\Phonebook.Contracts\bin\Debug\netcoreapp3.1\Phonebook.Contracts.dll
+C:\Dev\practise\Phonebook\Phonebook.Contracts\bin\Debug\netcoreapp3.1\Phonebook.Contracts.pdb
+C:\Dev\practise\Phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.csprojAssemblyReference.cache
+C:\Dev\practise\Phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.csproj.CoreCompileInputs.cache
+C:\Dev\practise\Phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.AssemblyInfoInputs.cache
+C:\Dev\practise\Phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.AssemblyInfo.cs
+C:\Dev\practise\Phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.dll
+C:\Dev\practise\Phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.pdb
+C:\Dev\private\phonebook\Phonebook.Contracts\bin\Debug\netcoreapp3.1\Phonebook.Contracts.deps.json
+C:\Dev\private\phonebook\Phonebook.Contracts\bin\Debug\netcoreapp3.1\Phonebook.Contracts.dll
+C:\Dev\private\phonebook\Phonebook.Contracts\bin\Debug\netcoreapp3.1\Phonebook.Contracts.pdb
+C:\Dev\private\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.csproj.CoreCompileInputs.cache
+C:\Dev\private\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.AssemblyInfoInputs.cache
+C:\Dev\private\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.AssemblyInfo.cs
+C:\Dev\private\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.dll
+C:\Dev\private\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.pdb

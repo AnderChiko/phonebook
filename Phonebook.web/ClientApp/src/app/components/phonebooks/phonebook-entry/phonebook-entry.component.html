@@ -1,0 +1,83 @@
+<div style="margin: auto;">
+  <button type="button" class="btn" [ngClass]="{'btn-success' : Id == 0, 'btn-link margin-top-minus-8 ' : Id > 0}"
+    (click)="openModalWithClass(template,Id,itemIn)">
+    <span *ngIf="Id == 0"><i class="glyphicon glyphicon-plus"></i>&nbsp; Add New </span>
+    <span *ngIf="Id > 0">{{text}} </span>
+  </button>
+</div>
+<ng-template #template>
+
+  <div class="card">
+    <div class="card-header popupHeader">
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true" class="text-danger">×</span>
+      </button>
+      <h5>
+        <span *ngIf="Id == 0">New Phonebook Entry</span>
+        <span *ngIf="Id > 0">Edit Phonebook Entry - </span> {{text}}
+      </h5>
+    </div>
+
+
+    <div class="card-body">
+      <div class="mx-4 my-2">
+
+        <form [formGroup]="pageForm">
+
+          <!--Phonebook entry Id -->
+          <div class="form-row" *ngIf="P1.id.value == -1">
+            <div class="col-md-5 required">
+              <label class="control-label" for="UsersId">id</label>
+            </div>
+            <div class="col-md-7 ">
+              <input type="text" class="form-control form-control-sm w-md-25 " formControlName="id"
+                [ngClass]="{ 'is-invalid': Submitted && P1.id.errors }" autocomplete="off" maxlength="20">
+            </div>
+          </div>
+
+          <!--Name -->
+          <div class="form-row">
+            <div class="col-md-5 required">
+              <label for="name" class="control-label">Name</label>
+            </div>
+            <div class="col-md-7 required">
+              <input type="text" class="form-control form-control-sm w-md-75 " formControlName="name"
+                [ngClass]="{ 'is-invalid': Submitted && P1.name.errors }" autocomplete="off" maxlength="50">
+            </div>
+          </div>
+
+          <!--Phone Number -->
+          <div class="form-row">
+            <div class="col-md-5 required">
+              <label for="phoneNumber" class="control-label">Phone Number</label>
+            </div>
+            <div class="col-md-7 required">
+              <input type="text" class="form-control form-control-sm w-md-75 " formControlName="phoneNumber"
+                [ngClass]="{ 'is-invalid': Submitted && P1.phoneNumber.errors }" autocomplete="off" maxlength="50">
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+    <div class="card-footer text-right">
+      <button mat-stroked-button (click)="submitForm()" class="btn btn-secondary btn-fixed ml-1"
+        *ngIf="addEditViewMode.Add == mode || addEditViewMode.Edit == mode">
+        Submit
+      </button>
+      <button mat-stroked-button (click)="modalRef.hide()" class="btn btn-secondary btn-fixed ml-2">
+        Cancel
+      </button>
+    </div>
+
+  </div>
+  <div class="my-container">
+    <ng-template #customLoadingTemplate>
+      <div class="custom-class">
+      </div>
+    </ng-template>
+    <ngx-loading [show]="loading" [template]="customLoadingTemplate"></ngx-loading>
+  </div>
+
+</ng-template>

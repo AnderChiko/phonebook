@@ -1,0 +1,59 @@
+<div class="row pt-3">
+
+  <div class="card  w-100">
+    <div class="card-body">
+      <div class="card-column mt-4 w-100" *ngIf="loading">
+        <div class="col-xs-12">
+          <h3 data-ng-cloak>
+            <span class=" fa fa-pulse fa-spinner"></span>
+            Loading.....
+          </h3>
+        </div>
+      </div>
+
+      <div class="card-column  w-100" *ngIf="loading">
+        <h5 class="card-title">Phonebook</h5>
+        <div class="form-row">
+          <div class="col-6 form-group">
+            <add-edit-phonebook [text]="" [id]="0" [mode]="addEditViewMode.Add" (reloadList)="reloadList()">
+            </add-edit-phonebook>
+          </div>
+          <div class="col-6">
+
+
+          </div>
+        </div>
+        <div class="form-row border rounded table-responsive-sm styled-table">
+          <table class="table table-borderless table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th><span class="pull-right"> Entries</span></th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngIf="phonebookList?.length == 0">
+                <td colspan="3" class="small text-center text-info">No data to display</td>
+              </tr>
+              <tr class="border-bottom" *ngFor="let phoneBook of phonebookList ">
+                <td>
+                  <add-edit-phonebook [text]="phoneBook.name" [id]="phoneBook.id" [mode]="addEditViewMode.Edit"
+                    (reloadList)="reloadList()"></add-edit-phonebook>
+                </td>
+                <td>{{phoneBook.name}}</td>
+                <td><span class="pull-right">{{ phoneBook.entriesCount }}</span></td>
+                <td>
+                  <button type="button" class="btn btn-info" [routerLink]="['/phoneBookEntries', phoneBook.id]">View
+                    Contacts</button>
+                  <button type="button" class="btn btn-danger" (click)="deletePhoneBook(phoneBook)">Delete</button>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

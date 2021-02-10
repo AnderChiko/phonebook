@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rPIeBPeO4HjLHPwSbFL1sYviVC8TGxXlPxj3KMOZnOD5fxrPdJ8W5UP4ua1eOsfWA3fLdsRBNwdjmX9MEm9iAQ==",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\private\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Anderson\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

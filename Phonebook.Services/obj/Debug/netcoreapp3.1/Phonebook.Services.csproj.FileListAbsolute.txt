@@ -1,0 +1,4 @@
+C:\Dev\practise\Phonebook\Phonebook.Services\obj\Debug\netcoreapp3.1\Phonebook.Services.csprojAssemblyReference.cache
+C:\Dev\practise\Phonebook\Phonebook.Services\obj\Debug\netcoreapp3.1\Phonebook.Services.csproj.CoreCompileInputs.cache
+C:\Dev\practise\Phonebook\Phonebook.Services\obj\Debug\netcoreapp3.1\Phonebook.Services.AssemblyInfoInputs.cache
+C:\Dev\practise\Phonebook\Phonebook.Services\obj\Debug\netcoreapp3.1\Phonebook.Services.AssemblyInfo.cs
