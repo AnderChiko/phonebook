@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonebook.Contracts", "Phon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonebook.DataAccess", "Phonebook.DataAccess\Phonebook.DataAccess.csproj", "{3595ECB9-BD54-40B7-B050-A7109A2F69B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook.Core", "Phonebook.Core\Phonebook.Core.csproj", "{E250E588-EB0F-40F2-9E6D-48EFCFB06D51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phonebook.Core", "Phonebook.Core\Phonebook.Core.csproj", "{E250E588-EB0F-40F2-9E6D-48EFCFB06D51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pnonebook.Test", "Pnonebook.Test\Pnonebook.Test.csproj", "{106BBCAC-83AA-43A8-BEB2-3410B82CB3F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{E250E588-EB0F-40F2-9E6D-48EFCFB06D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E250E588-EB0F-40F2-9E6D-48EFCFB06D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E250E588-EB0F-40F2-9E6D-48EFCFB06D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{106BBCAC-83AA-43A8-BEB2-3410B82CB3F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106BBCAC-83AA-43A8-BEB2-3410B82CB3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106BBCAC-83AA-43A8-BEB2-3410B82CB3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106BBCAC-83AA-43A8-BEB2-3410B82CB3F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{1AD985C7-200F-438E-BAB3-2C0298C80499} = {22FF203C-F36E-4ADD-9BC0-B032620DDCA5}
 		{3595ECB9-BD54-40B7-B050-A7109A2F69B4} = {22FF203C-F36E-4ADD-9BC0-B032620DDCA5}
 		{E250E588-EB0F-40F2-9E6D-48EFCFB06D51} = {22FF203C-F36E-4ADD-9BC0-B032620DDCA5}
+		{106BBCAC-83AA-43A8-BEB2-3410B82CB3F5} = {A5119DA8-E521-41F9-99DA-8B7CA84855B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFEA28B3-7DE5-48E7-80E5-C53D9CE08313}
