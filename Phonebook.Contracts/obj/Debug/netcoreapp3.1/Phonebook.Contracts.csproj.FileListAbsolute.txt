@@ -15,3 +15,12 @@ C:\Dev\private\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.C
 C:\Dev\private\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.AssemblyInfo.cs
 C:\Dev\private\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.dll
 C:\Dev\private\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.pdb
+C:\Dev\phonebook\Phonebook.Contracts\bin\Debug\netcoreapp3.1\Phonebook.Contracts.deps.json
+C:\Dev\phonebook\Phonebook.Contracts\bin\Debug\netcoreapp3.1\Phonebook.Contracts.dll
+C:\Dev\phonebook\Phonebook.Contracts\bin\Debug\netcoreapp3.1\Phonebook.Contracts.pdb
+C:\Dev\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.csprojAssemblyReference.cache
+C:\Dev\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.csproj.CoreCompileInputs.cache
+C:\Dev\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.AssemblyInfoInputs.cache
+C:\Dev\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.AssemblyInfo.cs
+C:\Dev\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.dll
+C:\Dev\phonebook\Phonebook.Contracts\obj\Debug\netcoreapp3.1\Phonebook.Contracts.pdb

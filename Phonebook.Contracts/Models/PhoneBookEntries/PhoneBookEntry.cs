@@ -10,7 +10,7 @@ namespace Phonebook.Contracts.Models.PhoneBookEntries
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
         public int PhoneBookId { get; set; }
-        public virtual Phonebook PhoneBook { get; set; }
+        public virtual Phonebooks PhoneBook { get; set; }
 
 
     }

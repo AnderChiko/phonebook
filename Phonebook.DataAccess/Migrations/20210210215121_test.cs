@@ -1,16 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Phonebook.DataAccess.Migrations
 {
-    public partial class Inital_Migation : Migration
+    public partial class test : Migration
     {
+
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "PhoneBooks",
+                name: "Phonebooks",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -19,11 +17,11 @@ namespace Phonebook.DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PhoneBooks", x => x.Id);
+                    table.PrimaryKey("PK_Phonebooks", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "PhoneBookEntries",
+                name: "PhonebookEntries",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -34,28 +32,28 @@ namespace Phonebook.DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PhoneBookEntries", x => x.Id);
+                    table.PrimaryKey("PK_PhonebookEntries", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PhoneBookEntries_PhoneBooks_PhoneBookId",
+                        name: "FK_PhonebookEntries_Phonebooks_PhonebookId",
                         column: x => x.PhoneBookId,
-                        principalTable: "PhoneBooks",
+                        principalTable: "Phonebooks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_PhoneBookEntries_PhoneBookId",
-                table: "PhoneBookEntries",
-                column: "PhoneBookId");
+                name: "IX_PhoneBookEntries_PhonebookId",
+                table: "PhonebookEntries",
+                column: "PhonebookId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PhoneBookEntries");
+                name: "PhonebookEntries");
 
             migrationBuilder.DropTable(
-                name: "PhoneBooks");
+                name: "Phonebooks");
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\private\\phonebook\\Phonebook.Core\\Phonebook.Core.csproj": {}
+    "C:\\Dev\\phonebook\\Phonebook.Core\\Phonebook.Core.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\private\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj": {
+    "C:\\Dev\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\private\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj",
+        "projectUniqueName": "C:\\Dev\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj",
         "projectName": "Phonebook.Contracts",
-        "projectPath": "C:\\Dev\\private\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj",
+        "projectPath": "C:\\Dev\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj",
         "packagesPath": "C:\\Users\\Anderson\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\private\\phonebook\\Phonebook.Contracts\\obj\\",
+        "outputPath": "C:\\Dev\\phonebook\\Phonebook.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\Dev\\private\\phonebook\\Phonebook.Core\\Phonebook.Core.csproj": {
+    "C:\\Dev\\phonebook\\Phonebook.Core\\Phonebook.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\private\\phonebook\\Phonebook.Core\\Phonebook.Core.csproj",
+        "projectUniqueName": "C:\\Dev\\phonebook\\Phonebook.Core\\Phonebook.Core.csproj",
         "projectName": "Phonebook.Core",
-        "projectPath": "C:\\Dev\\private\\phonebook\\Phonebook.Core\\Phonebook.Core.csproj",
+        "projectPath": "C:\\Dev\\phonebook\\Phonebook.Core\\Phonebook.Core.csproj",
         "packagesPath": "C:\\Users\\Anderson\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\private\\phonebook\\Phonebook.Core\\obj\\",
+        "outputPath": "C:\\Dev\\phonebook\\Phonebook.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -95,8 +95,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Dev\\private\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj": {
-                "projectPath": "C:\\Dev\\private\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj"
+              "C:\\Dev\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj": {
+                "projectPath": "C:\\Dev\\phonebook\\Phonebook.Contracts\\Phonebook.Contracts.csproj"
               }
             }
           }

@@ -55,7 +55,7 @@ namespace Phonebook.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Contracts.Models.PhoneBookEntries.Phonebook phoneBookModel)
+        public async Task<IActionResult> Post(Phonebooks phoneBookModel)
         {
             //Should use post-model and align data
             try
@@ -74,7 +74,7 @@ namespace Phonebook.Web.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put(Contracts.Models.PhoneBookEntries.Phonebook phoneBookModel)
+        public async Task<IActionResult> Put(Phonebooks phoneBookModel)
         {
             try
             {

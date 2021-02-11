@@ -11,20 +11,20 @@ namespace Phonebook.Core.ServiceLayer
 {
     public class PhoneBookService : IPhoneBookService
     {
-        private readonly IGenericRepository<Contracts.Models.PhoneBookEntries.Phonebook> _phoneBookRepository;
+        private readonly IGenericRepository<Phonebooks> _phoneBookRepository;
         private readonly IGenericRepository<PhonebookEntry> _phoneBookEntryRepository;
 
-        public PhoneBookService(IGenericRepository<Contracts.Models.PhoneBookEntries.Phonebook> phoneBookRepository, IGenericRepository<PhonebookEntry> phoneBookEntryRepository)
+        public PhoneBookService(IGenericRepository<Phonebooks> phoneBookRepository, IGenericRepository<PhonebookEntry> phoneBookEntryRepository)
         {
             _phoneBookRepository = phoneBookRepository;
             _phoneBookEntryRepository = phoneBookEntryRepository;
         }
 
-        public async Task<Contracts.Models.PhoneBookEntries.Phonebook> AddPhoneBookAsync(string name)
+        public async Task<Phonebooks> AddPhoneBookAsync(string name)
         {
             await IsExisting(name);
 
-            var phoneBook = new Contracts.Models.PhoneBookEntries.Phonebook { Name = name };
+            var phoneBook = new Phonebooks { Name = name };
 
             await _phoneBookRepository.AddAsync(phoneBook);
             await _phoneBookRepository.SaveChangesAsync();
@@ -49,7 +49,7 @@ namespace Phonebook.Core.ServiceLayer
             await _phoneBookRepository.SaveChangesAsync();
         }
 
-        public async Task EditPhoneBookAsync(Contracts.Models.PhoneBookEntries.Phonebook phoneBook)
+        public async Task EditPhoneBookAsync(Phonebooks phoneBook)
         {
             var book = await GetPhoneBookByIdAsync(phoneBook.Id);
 
@@ -62,14 +62,14 @@ namespace Phonebook.Core.ServiceLayer
             await _phoneBookRepository.SaveChangesAsync();
         }
 
-        public async Task<Contracts.Models.PhoneBookEntries.Phonebook> GetPhoneBookByIdAsync(int id)
+        public async Task<Phonebooks> GetPhoneBookByIdAsync(int id)
         {
             var phoneBook = await _phoneBookRepository.FindByIdAsync(id);
 
             return phoneBook;
         }
 
-        public async Task<IList<Contracts.Models.PhoneBookEntries.Phonebook>> GetPhoneBooksAsync()
+        public async Task<IList<Phonebooks>> GetPhoneBooksAsync()
         {
             return await _phoneBookRepository.Entities.Include(a => a.PhoneBookEntries).OrderBy(b => b.Name).ToListAsync();
         }

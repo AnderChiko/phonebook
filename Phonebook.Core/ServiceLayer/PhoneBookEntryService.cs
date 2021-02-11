@@ -15,7 +15,7 @@ namespace Phonebook.Core.ServiceLayer
         private readonly IGenericRepository<PhonebookEntry> _phoneBookEntryRepository;
         IPhoneBookService phoneBookService;
 
-        public PhoneBookEntryService(IPhoneBookService phoneBookService, IGenericRepository<Contracts.Models.PhoneBookEntries.Phonebook> phoneBookRepository, IGenericRepository<PhonebookEntry> phoneBookEntryRepository)
+        public PhoneBookEntryService(IPhoneBookService phoneBookService, IGenericRepository<Phonebooks> phoneBookRepository, IGenericRepository<PhonebookEntry> phoneBookEntryRepository)
         {
             this.phoneBookService = phoneBookService;
             _phoneBookEntryRepository = phoneBookEntryRepository;

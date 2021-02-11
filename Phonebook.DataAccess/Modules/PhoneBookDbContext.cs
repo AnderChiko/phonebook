@@ -8,7 +8,7 @@ namespace Phonebook.DataAccess.Modules
 {
     public class PhoneBookDbContext : DbContext
     {
-        public DbSet<Contracts.Models.PhoneBookEntries.Phonebook> PhoneBooks { get; set; }
+        public DbSet<Phonebooks> PhoneBooks { get; set; }
         public DbSet<PhonebookEntry> PhoneBookEntries { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

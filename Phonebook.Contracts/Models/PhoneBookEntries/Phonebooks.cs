@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Phonebook.Contracts.Models.PhoneBookEntries
 {
-    public class Phonebook
+    public class Phonebooks
     {
         public int Id { get; set; }
         public string Name { get; set; }

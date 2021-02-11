@@ -22,3 +22,15 @@ C:\Dev\private\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.A
 C:\Dev\private\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.csproj.CopyComplete
 C:\Dev\private\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.dll
 C:\Dev\private\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.pdb
+C:\Dev\phonebook\Phonebook.Core\bin\Debug\netcoreapp3.1\Phonebook.Core.deps.json
+C:\Dev\phonebook\Phonebook.Core\bin\Debug\netcoreapp3.1\Phonebook.Core.dll
+C:\Dev\phonebook\Phonebook.Core\bin\Debug\netcoreapp3.1\Phonebook.Core.pdb
+C:\Dev\phonebook\Phonebook.Core\bin\Debug\netcoreapp3.1\Phonebook.Contracts.dll
+C:\Dev\phonebook\Phonebook.Core\bin\Debug\netcoreapp3.1\Phonebook.Contracts.pdb
+C:\Dev\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.csprojAssemblyReference.cache
+C:\Dev\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.csproj.CoreCompileInputs.cache
+C:\Dev\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.AssemblyInfoInputs.cache
+C:\Dev\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.AssemblyInfo.cs
+C:\Dev\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.csproj.CopyComplete
+C:\Dev\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.dll
+C:\Dev\phonebook\Phonebook.Core\obj\Debug\netcoreapp3.1\Phonebook.Core.pdb
