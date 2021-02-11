@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api/',
+  //apiBaseUrl: window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api/',
+  apiBaseUrl: 'http://localhost:44349/api/',
   loginTimeoutMilliseconds: 20000
 };
 

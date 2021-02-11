@@ -11,15 +11,15 @@
         </div>
       </div>
 
-      <div class="card-column  w-100" *ngIf="loading">
+      <div class="card-column  w-100" *ngIf="!loading">
         <h5 class="card-title">Phonebook</h5>
         <div class="form-row">
           <div class="col-6 form-group">
-            <add-edit-phonebook [text]="" [id]="0" [mode]="addEditViewMode.Add" (reloadList)="reloadList()">
+            <add-edit-phonebook [text]="" [id]="0" [mode]="addEditViewMode.Add" [item]="phonebook"
+              (reloadList)="reloadList()">
             </add-edit-phonebook>
           </div>
           <div class="col-6">
-
 
           </div>
         </div>
@@ -39,13 +39,12 @@
               </tr>
               <tr class="border-bottom" *ngFor="let phoneBook of phonebookList ">
                 <td>
-                  <add-edit-phonebook [text]="phoneBook.name" [id]="phoneBook.id" [mode]="addEditViewMode.Edit"
-                    (reloadList)="reloadList()"></add-edit-phonebook>
+                  <add-edit-phonebook [text]="phoneBook.Name" [id]="phoneBook.Id" [item]="phoneBook"
+                    [mode]="addEditViewMode.Edit" (reloadList)="reloadList()"></add-edit-phonebook>
                 </td>
-                <td>{{phoneBook.name}}</td>
-                <td><span class="pull-right">{{ phoneBook.entriesCount }}</span></td>
+                <td><span class="pull-right">{{ phoneBook.EntriesCount }}</span></td>
                 <td>
-                  <button type="button" class="btn btn-info" [routerLink]="['/phoneBookEntries', phoneBook.id]">View
+                  <button type="button" class="btn btn-info" [routerLink]="['/phoneBookEntries', phoneBook.Id]">View
                     Contacts</button>
                   <button type="button" class="btn btn-danger" (click)="deletePhoneBook(phoneBook)">Delete</button>
 

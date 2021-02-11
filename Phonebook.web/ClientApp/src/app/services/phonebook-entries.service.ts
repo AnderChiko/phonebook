@@ -1,7 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IPhonebookEntry } from '../models';
+import { IPhonebookEntry, PhonebookEntry } from '../models';
 import { ApiService } from './api.service';
 
 @Injectable({
@@ -17,20 +17,20 @@ export class PhonebookEntriesService {
 
   }
 
-  public getPhoneBookEntries(phoneBookId: number): Observable<IPhonebookEntry[]> {
-    return this.apiService.GET<IPhonebookEntry[]>(this.Url + phoneBookId);
+  public getPhoneBookEntries(phoneBookId: number): Observable<PhonebookEntry[]> {
+    return this.apiService.GET<PhonebookEntry[]>(this.Url + phoneBookId);
   }
 
-  public getPhoneBook(id: number): Observable<IPhonebookEntry> {
-    return this.apiService.GET<IPhonebookEntry>(this.Url + id);
+  public getPhoneBook(id: number): Observable<PhonebookEntry> {
+    return this.apiService.GET<PhonebookEntry>(this.Url + id);
   }
 
-  public savePhoneBookEntry(phoneBookEntry, phoneBookId): Observable<IPhonebookEntry> {
-    return this.apiService.POST<IPhonebookEntry, IPhonebookEntry>(this.Url + phoneBookId, phoneBookEntry);
+  public savePhoneBookEntry(phoneBookEntry, phoneBookId): Observable<PhonebookEntry> {
+    return this.apiService.POST<PhonebookEntry, PhonebookEntry>(this.Url + phoneBookId, phoneBookEntry);
   }
 
-  public editPhoneBookEntry(phoneBookEntry): Observable<IPhonebookEntry> {
-    return this.apiService.PUT<IPhonebookEntry, IPhonebookEntry>(this.url, phoneBookEntry);
+  public editPhoneBookEntry(phoneBookEntry): Observable<PhonebookEntry> {
+    return this.apiService.PUT<PhonebookEntry, PhonebookEntry>(this.url, phoneBookEntry);
   }
 
   public deletePhoneBookEntry(id) {

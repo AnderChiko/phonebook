@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IPhonebook } from '../models';
+import { Phonebook } from '../models';
 import { ApiService } from './api.service';
 
 @Injectable({
@@ -16,20 +16,20 @@ export class PhonebookService {
   ) {
   }
 
-  public getPhoneBooks(): Observable<IPhonebook[]> {
-    return this.apiService.GET<IPhonebook[]>(this.url);
+  public getPhoneBooks(): Observable<Phonebook[]> {
+    return this.apiService.GET<Phonebook[]>(this.url);
   }
 
-  public getPhoneBook(id: number): Observable<IPhonebook> {
-    return this.apiService.GET<IPhonebook>(this.Url + id);
+  public getPhoneBook(id: number): Observable<Phonebook> {
+    return this.apiService.GET<Phonebook>(this.Url + id);
   }
 
-  public savePhoneBook(phoneBook): Observable<IPhonebook> {
-    return this.apiService.POST<IPhonebook, IPhonebook>(this.url, phoneBook);
+  public savePhoneBook(phoneBook): Observable<Phonebook> {
+    return this.apiService.POST<Phonebook, Phonebook>(this.url, phoneBook);
   }
 
-  public editPhoneBook(phoneBook): Observable<IPhonebook> {
-    return this.apiService.PUT<IPhonebook, IPhonebook>(this.url, phoneBook);
+  public editPhoneBook(phoneBook): Observable<Phonebook> {
+    return this.apiService.PUT<Phonebook, Phonebook>(this.url, phoneBook);
   }
 
   public deletePhoneBook(id) {

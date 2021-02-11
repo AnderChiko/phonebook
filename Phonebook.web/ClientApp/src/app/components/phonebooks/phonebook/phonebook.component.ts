@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { LocalStorageService } from 'src/app/helpers/local-storage-service';
 //import { ToastrService } from 'ngx-toastr';
-import { AddEditViewMode, IPhonebook } from 'src/app/models';
+import { AddEditViewMode, IPhonebook, Phonebook } from 'src/app/models';
 import { PhonebookService } from 'src/app/services';
 
 @Component({
@@ -12,6 +13,8 @@ import { PhonebookService } from 'src/app/services';
 export class PhonebookComponent implements OnInit {
 
   public Item: IPhonebook;
+  items: Phonebook[]
+
   public loading: boolean = false;
   public modalRef: BsModalRef;
 
@@ -23,7 +26,7 @@ export class PhonebookComponent implements OnInit {
   public selectedIndex: number = -1;
 
   @Input('id') Id: number;
-  @Input('item') itemIn: IPhonebook;
+  @Input('item') itemIn: Phonebook;
   @Input('mode') mode: string;
   @Input('text') text: string;
 
@@ -31,6 +34,7 @@ export class PhonebookComponent implements OnInit {
 
   constructor(private phonebookService: PhonebookService
     //, private toastr: ToastrService
+    , private localstorage: LocalStorageService
     , private modalService: BsModalService
     , private _formBuilder: FormBuilder) { }
 
@@ -50,13 +54,13 @@ export class PhonebookComponent implements OnInit {
   public get P1() { return this.pageForm.controls; }
 
 
-  public openModalWithClass(template: TemplateRef<any>, _itemId: number, _Item: IPhonebook) {
+  public openModalWithClass(template: TemplateRef<any>, _itemId: number, _Item: Phonebook) {
 
     this.pageInitialise();
     this.getItem(template, _Item);
   }
 
-  private getItem(template: TemplateRef<any>, _item: IPhonebook) {
+  private getItem(template: TemplateRef<any>, _item: Phonebook) {
 
     this.loading = true;
     this.mapObjectToFormControls(_item);
@@ -66,19 +70,20 @@ export class PhonebookComponent implements OnInit {
   }
 
 
-  private mapObjectToFormControls(obj: IPhonebook) {
+  private mapObjectToFormControls(obj: Phonebook) {
 
-    this.P1.UsersId.setValue(obj.id);
-    if (obj.id == 0)
+    this.P1.id.setValue(obj.Id);
+    if (obj.Id == 0)
       return;
 
-    this.P1.Name.setValue(obj.name);
+    this.P1.name.setValue(obj.Name);
   }
 
   private mapFormControlsToObject() {
     return {
-      id: this.P1.id.value,
-      name: this.P1.name.value
+      Id: this.P1.id.value,
+      Name: this.P1.name.value,
+      EntriesCount: 0
     }
   }
 
@@ -92,7 +97,30 @@ export class PhonebookComponent implements OnInit {
 
     this.loading = true;
     this.isDuplicate = false;
-    if (objPost.id == 0) {
+
+    this.items = this.localstorage.getPhonebooks()
+    if (this.items == null)
+      this.items = [];
+
+    if (objPost.Id == 0) {
+
+      objPost.Id = this.items.length + 1;
+      this.items.push(objPost);
+    }
+    else {
+      let selectedIndex = this.items.findIndex(x => x.Id === objPost.Id);
+      this.items[selectedIndex] = objPost;
+    }
+
+    this.localstorage.setPhonebooks(this.items);
+    this.reloadList.emit();
+    this.loading = false;
+    this.modalRef.hide();
+
+
+    /*
+
+    if (objPost.Id == 0) {
       this.phonebookService.savePhoneBook(objPost).subscribe(
         (response: IPhonebook) => {
 
@@ -121,8 +149,6 @@ export class PhonebookComponent implements OnInit {
           this.loading = false;
           this.modalRef.hide();
         });
-    }
+    }*/
   }
-
-
 }

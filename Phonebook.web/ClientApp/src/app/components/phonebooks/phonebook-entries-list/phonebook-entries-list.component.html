@@ -17,7 +17,7 @@
           <div class="col-6 form-group">
             <button type="button" class="btn btn-info" [routerLink]="['/']">Back</button>
             <add-edit-phonebook-entry [text]="" [id]="0" [phoneBookId]="phoneBookId" [mode]="addEditViewMode.Add"
-              (reloadList)="reloadList()">
+              [item]="phonebookEntry" (reloadList)="reloadList()">
             </add-edit-phonebook-entry>
           </div>
           <div class="col-6">
@@ -43,13 +43,14 @@
               <tr *ngIf="getPhoneBookEntriesToShow()?.length == 0">
                 <td colspan="3" class="small text-center text-info">No data to display</td>
               </tr>
-              <tr class="border-bottom" *ngFor="let phonebookEntry of getPhoneBookEntriesToShow()  | async">
+              <tr class="border-bottom" *ngFor="let phonebookEntry of getPhoneBookEntriesToShow()">
                 <td>
-                  <add-edit-phonebook-entry [text]="phonebookEntry.name" [id]="phonebookEntry.id"
-                    [phoneBookId]="phoneBookId" [mode]="addEditViewMode.Edit" (reloadList)="reloadList()">
+                  <add-edit-phonebook-entry [text]="phonebookEntry.Name" [id]="phonebookEntry.Id"
+                    [item]="phonebookEntry" [phoneBookId]="phoneBookId" [mode]="addEditViewMode.Edit"
+                    (reloadList)="reloadList()">
                   </add-edit-phonebook-entry>
                 </td>
-                <td>{{phonebookEntry.phoneNumber}}</td>
+                <td>{{phonebookEntry.PhoneNumber}}</td>
                 <td><button type="button" class="btn btn-danger"
                     (click)="deletePhoneBookEntry(phonebookEntry)">Delete</button>
                 </td>
